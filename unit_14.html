@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unit 14</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/custom-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>UNIT 14. API Погода</h1>
+            <h2><a href="https://itgid.info/course/javascript-2" target="_blank">JavaScript v.2.0 - курс Лущенко
+                    Александра</a></h2>
+            <p>Верстку в этом юните - делаете самостоятельно. Имя CSS файла - любое.</p>
+        </div>
+        <div class="sity-select">
+            <select id="my-select">
+                <option value="2643743">London</option>
+                <option value="625144">Minsk</option>
+                <option value="3099434">Gdansk</option>
+                <option value="703448">Kyiv</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="weather-screen">
+                <div class="weather-screen__sity">
+                    Bengaluru
+                </div>
+                <div class="weather-screen__temperature">
+                    20&#176; C
+                </div>
+                <div class="weather-screen__caption">
+                    Clear
+                </div>
+                <div class="weather-screen__future weather-future">
+                    <ul class="weather-future__list">
+                        <li class="weather-future__item weather-small">
+                            <div class="weather-small__hourse">
+                                20:00
+                            </div>
+                            <div class="weather-small__icon">
+                                <img src="img/clear.svg" alt="">
+                            </div>
+                            <div class="weather-small__temperature">
+                                18&#176; C
+                            </div>
+                        </li>
+                        <li class="weather-future__item weather-small">
+                            <div class="weather-small__hourse">
+                                20:00
+                            </div>
+                            <div class="weather-small__icon">
+                                <img src="img/clear.svg" alt="">
+                            </div>
+                            <div class="weather-small__temperature">
+                                18&#176; C
+                            </div>
+                        </li>
+                        <li class="weather-future__item weather-small">
+                            <div class="weather-small__hourse">
+                                20:00
+                            </div>
+                            <div class="weather-small__icon">
+                                <img src="img/clear.svg" alt="">
+                            </div>
+                            <div class="weather-small__temperature">
+                                18&#176; C
+                            </div>
+                        </li>
+                        <li class="weather-future__item weather-small">
+                            <div class="weather-small__hourse">
+                                20:00
+                            </div>
+                            <div class="weather-small__icon">
+                                <img src="img/clear.svg" alt="">
+                            </div>
+                            <div class="weather-small__temperature">
+                                18&#176; C
+                            </div>
+                        </li>
+                        <li class="weather-future__item weather-small">
+                            <div class="weather-small__hourse">
+                                20:00
+                            </div>
+                            <div class="weather-small__icon">
+                                <img src="img/clear.svg" alt="">
+                            </div>
+                            <div class="weather-small__temperature">
+                                18&#176; C
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="weather-screen__bottom weather-info">
+                    <li class="weather-info__item info-item">
+                        <div class="info-item__data" id="real-feel">
+                            18&#xb0; C
+                        </div>
+                        <div class="info-item__text">
+                            RealFeel
+                        </div>
+                    </li>
+                    <li class="weather-info__item info-item">
+                        <div class="info-item__data" id="humidity">
+                            63%
+                        </div>
+                        <div class="info-item__text">
+                            Humidity
+                        </div>
+                    </li>
+                    <li class="weather-info__item info-item">
+                        <div class="info-item__data" id="wind">
+                            3
+                        </div>
+                        <div class="info-item__text">
+                            W, force
+                        </div>
+                    </li>
+                    <li class="weather-info__item info-item">
+                        <div class="info-item__data" id="pressure">
+                            1012hPa
+                        </div>
+                        <div class="info-item__text">
+                            Pressure
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="weather__icon">
+                <img src="img/cloudly.svg" alt="weather image">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/custom-select.min.js"></script>
+    <script src="js/unit_14.js"></script>
+</body>
+
+</html>
