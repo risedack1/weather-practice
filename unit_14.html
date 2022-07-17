@@ -17,19 +17,18 @@
 <body>
     <div class="container">
         <div class="top">
-            <h1>UNIT 14. API Погода</h1>
-            <h2><a href="https://itgid.info/course/javascript-2" target="_blank">JavaScript v.2.0 - курс Лущенко
-                    Александра</a></h2>
-            <p>Верстку в этом юните - делаете самостоятельно. Имя CSS файла - любое.</p>
+            <h1 class="title">Get Weather</h1>
+            <p class="sity">Your city is <span class="city">Wroclaw</span></p>
         </div>
-        <div class="sity-select">
+        <!-- <div class="sity-select">
             <select id="my-select">
-                <option value="2643743">London</option>
-                <option value="625144">Minsk</option>
-                <option value="3099434">Gdansk</option>
-                <option value="703448">Kyiv</option>
+                <option value="51.5085,-0.1257">London</option>
+                <option value="53.9,27.5667">Minsk</option>
+                <option value="54.3521,18.6464">Gdansk</option>
+                <option value="50.4333,30.5167">Kyiv</option>
+                <option value="51.1,17.0333">Wroclaw</option>
             </select>
-        </div>
+        </div> -->
 
         <div class="wrapper">
             <div class="weather-screen">
@@ -136,14 +135,29 @@
                     </li>
                 </ul>
             </div>
-            <div class="weather__icon">
+            <!-- <div class="weather__icon">
                 <img src="img/cloudly.svg" alt="weather image">
+            </div> -->
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__inner">
+            <button class="modal__close" type="button"></button>
+            <p class="modal__text">
+                You are in <span class="city">Wroclaw</span> ?
+            </p>
+            <div class="modal__buttons">
+                <button class="modal__button">Yes</button>
+                <button class="modal__button">No</button>
             </div>
         </div>
     </div>
 
     <script src="js/custom-select.min.js"></script>
+    <!-- <script src="js/get-ip.js"></script> -->
     <script src="js/unit_14.js"></script>
+    <!-- <script src="js/test.js"></script> -->
 </body>
 
 </html>

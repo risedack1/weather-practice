@@ -8,6 +8,15 @@ body {
     background-image: radial-gradient(80.03% 48.97% at 100% 10.52%, #3ED6E0 0%, #3A92E2 100%);
 }
 
+.title {
+    font-size: 72px;
+}
+
+.sity {
+    margin: 0;
+    font-size: 38px;
+}
+
 .container {
     padding: 0 15px;
     margin: 0 auto;
@@ -41,16 +50,16 @@ body {
 
 .wrapper {
     padding-bottom: 50px;
-    margin-top: -104px;
+    /* margin-top: -104px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
 .weather-screen {
     position: relative;
     padding: 30px 40px;
-    margin-right: auto;
+    /* margin-right: auto; */
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -154,9 +163,103 @@ body {
     object-position: center;
 }
 
+/* modal window */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal--disable {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal__inner {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    border: 3px solid #fff;
+    background-image: radial-gradient(80.03% 48.97% at 100% 10.52%, #3ED6E0 0%, #3A92E2 100%);
+    transform: translate(-50%, -50%);
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    transform: rotate(45deg);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal__close::before,
+.modal__close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.modal__close::after {
+    width: 3px;
+    height: 80%;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal__button {
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal__button:not(:last-child) {
+    margin-right: 20px;
+}
+
+.modal__button:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 1100px) {
     .wrapper {
         margin-top: 0;
+    }
+
+    .top {
+        margin-bottom: 20px;
     }
 }
 
@@ -175,12 +278,17 @@ body {
 }
 
 @media (max-width: 576px) {
-    .top {
-        display: none;
+    .title {
+        font-size: 32px;
+    }
+
+    .sity {
+        font-size: 28px;
     }
     .sity-select {
         padding-top: 30px;
     }
+
     .weather-screen {
         padding: 15px 20px;
         padding-bottom: 0;
@@ -189,6 +297,7 @@ body {
     .weather-future__list {
         padding-bottom: 5px;
         overflow: scroll;
+        justify-content: left;
     }
 
     .weather-future__item {

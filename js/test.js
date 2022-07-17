@@ -1,48 +1,18 @@
-// modal--------------------------------------------
-
-const modalWrapper = document.querySelector('.modal');
-
-modalWrapper.addEventListener('click', (e) => {
-    const target = e.target;
-
-    if (target.matches('.modal__button') || target.matches('.modal__close')) {
-        modalWrapper.classList.add('modal--disable');
-    }
-});
-
-// set weather---------------------------------------------------------
+customSelect('#my-select');
 
 const param = {
     url: 'https://api.openweathermap.org/data/2.5/forecast',
     appid: 'ff4384d9d6ad00be68b96672b35cd33c',
 }
 
-function getLocation() {
-    // get location of country
-    fetch("https://ipinfo.io/json?token=1757608293c75d").then(
-        (response) => response.json()
-    ).then(getWeather)
-        .then(addCityName)
-}
-
-function addCityName(dataLoc) {
-    const cityArray = document.querySelectorAll('.city');
-    const cityName = dataLoc.city;
-
-    cityArray.forEach(city => {
-        city.textContent = cityName;
-    });
-}
-
-function getWeather(dataLoc) {
-    const locArray = dataLoc.loc.split(',');
+function getWeather() {
+    const cityId = document.querySelector('#my-select').value;
+    const locArray = cityId.split(',');
 
     fetch(`${param.url}?lat=${locArray[0]}&lon=${locArray[1]}&units=metric&APPID=${param.appid}`)
         .then(weather => {
             return weather.json();
         }).then(showWeather);
-
-    return dataLoc;
 }
 
 function showWeather(data) {
@@ -88,4 +58,5 @@ function showWeather(data) {
 
 }
 
-getLocation();
+getWeather();
+document.querySelector('#my-select').onchange = getWeather;
