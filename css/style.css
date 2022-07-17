@@ -253,6 +253,10 @@ body {
     transform: scale(1.1);
 }
 
+.weather__icon {
+    display: none;
+}
+
 @media (max-width: 1100px) {
     .wrapper {
         margin-top: 0;
