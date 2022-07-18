@@ -18,21 +18,13 @@
     <div class="container">
         <div class="top">
             <h1 class="title">Get Weather</h1>
-            <p class="sity">Your city is <span class="city">Wroclaw</span></p>
         </div>
-        <!-- <div class="sity-select">
-            <select id="my-select">
-                <option value="51.5085,-0.1257">London</option>
-                <option value="53.9,27.5667">Minsk</option>
-                <option value="54.3521,18.6464">Gdansk</option>
-                <option value="50.4333,30.5167">Kyiv</option>
-                <option value="51.1,17.0333">Wroclaw</option>
-            </select>
-        </div> -->
-
         <div class="wrapper">
+            <button class="new-country-button">
+                select another country
+            </button>
             <div class="weather-screen">
-                <div class="weather-screen__sity">
+                <div class="weather-screen__city">
                     Bengaluru
                 </div>
                 <div class="weather-screen__temperature">
@@ -142,20 +134,56 @@
     </div>
 
     <div class="modal">
-        <div class="modal__inner">
+        <div class="modal__inner modal__inner--question">
             <button class="modal__close" type="button"></button>
             <p class="modal__text">
                 You are in <span class="city">Wroclaw</span> ?
             </p>
             <div class="modal__buttons">
-                <button class="modal__button">Yes</button>
-                <button class="modal__button">No</button>
+                <button class="modal__button modal__button--yes">Yes</button>
+                <button class="modal__button modal__button--no">No</button>
             </div>
+        </div>
+
+        <div class="modal__inner modal__inner--disable modal__inner--search">
+            <button class="modal__close" type="button"></button>
+            <label class="modal__label">
+                <span class="modal__label-span">
+                    Write your country name
+                </span>
+                <input class="modal__input modal__input--country" type="text">
+                <ul class="modal__list">
+                    <!-- <li class="modal__item">
+                        <button class="modal__item-button">
+                            Poland
+                        </button>
+                    </li>
+                    <li class="modal__item">
+                        <button class="modal__item-button">
+                            Ukrain
+                        </button>
+                    </li>
+                    <li class="modal__item">
+                        <button class="modal__item-button">
+                            USA
+                        </button>
+                    </li> -->
+                </ul>
+            </label>
+            <label class="modal__label">
+                <span class="modal__label-span">
+                    Write your city name
+                </span>
+                <input class="modal__input modal__input--city" type="text">
+            </label>
+
+            <button class="modal__button modal__button--confirm">Confirm</button>
         </div>
     </div>
 
     <script src="js/custom-select.min.js"></script>
     <!-- <script src="js/get-ip.js"></script> -->
+    <script src="js/get-country.js"></script>
     <script src="js/unit_14.js"></script>
     <!-- <script src="js/test.js"></script> -->
 </body>
