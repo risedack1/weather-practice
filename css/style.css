@@ -368,6 +368,10 @@ body {
     .weather__icon {
         display: none;
     }
+
+    .new-country-button {
+        background-color: rgba(0, 10, 255, 0.5);
+    }
 }
 
 @media (max-width: 576px) {
@@ -389,7 +393,7 @@ body {
     }
     .weather-future__list {
         padding-bottom: 5px;
-        overflow: scroll;
+        overflow-x: scroll;
         justify-content: left;
     }
 

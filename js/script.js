@@ -63,7 +63,9 @@ function getWeather(dataLoc) {
 }
 
 function showWeather(data) {
-    // console.log(data);
+    console.log(data);
+
+    animationControl(data.list['0'].weather['0'].main);
 
     const city = document.querySelector('.weather-screen__city');
     const temperature = document.querySelector('.weather-screen__temperature');
