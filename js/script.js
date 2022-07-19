@@ -83,9 +83,8 @@ function showWeather(data) {
         city.textContent = data.city.name;
         temperature.innerHTML = Math.round(data.list['0'].main.temp) + '&#xb0; C';
         caption.textContent = data.list['0'].weather['0']['main'];
-        icon.setAttribute('src', `img/${data.list['0'].weather['0']['main'].toLowerCase()}.svg`);
 
-        // future listsub info
+        // listsub info
         realFeel.innerHTML = Math.round(data.list['0'].main.feels_like) + '&#xb0; C';
         humidity.textContent = data.list['0'].main.humidity + '%';
         wind.textContent = data.list['0'].wind.speed;
@@ -95,14 +94,14 @@ function showWeather(data) {
 
         for (let i = 0; i < futureWeather.length; i++) {
             const hourse = futureWeather[i].querySelector('.weather-small__hourse');
-            const icon = futureWeather[i].querySelector('.weather-small__icon img');
+            const icon = futureWeather[i].querySelector('.weather-small__icon');
             const temperature = futureWeather[i].querySelector('.weather-small__temperature');
 
             // get future time
             const time = data.list[i].dt_txt;
 
             hourse.textContent = time.slice(-8, -3);
-            icon.setAttribute('src', `http://openweathermap.org/img/wn/${data.list[i].weather['0'].icon}@2x.png`);
+            icon.innerHTML = `<div class="small-${data.list[i].weather['0'].main.toLowerCase()}"></div>`;
             temperature.innerHTML = Math.round(data.list[i].main.temp) + '&#xb0; C';
         }
 

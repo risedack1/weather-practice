@@ -84,7 +84,7 @@ body {
     align-items: center;
     height: 520px;
     max-width: 600px;
-    width: 100%;
+    width: 95%;
     font-weight: 400;
     overflow: hidden;
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .weather-screen__city {
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     font-size: 40px;
     line-height: 52px;
 }
@@ -170,8 +170,8 @@ body {
 }
 
 .weather-small__icon {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 .weather-small__icon img {
@@ -342,10 +342,6 @@ body {
     transform: scale(1.1);
 }
 
-.weather__icon {
-    display: none;
-}
-
 @media (max-width: 1100px) {
     .wrapper {
         margin-top: 0;
@@ -363,10 +359,6 @@ body {
 
     .weather-screen {
         margin-right: 0;
-    }
-
-    .weather__icon {
-        display: none;
     }
 
     .new-country-button {
