@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/animation-bg.css">
     <link rel="stylesheet" href="css/animation-small-card.css">
     <link rel="stylesheet" href="css/style.css">
@@ -56,64 +57,74 @@
                 <div class="weather-screen__caption">
                     Clear
                 </div>
-                <div class="weather-screen__future weather-future">
-                    <ul class="weather-future__list">
-                        <li class="weather-future__item weather-small">
-                            <div class="weather-small__hourse">
-                                20:00
+                <div class="weather-screen__future swiper weather-future">
+                    <div class="weather-future__list swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="weather-future__item weather-small">
+                                <div class="weather-small__hourse">
+                                    20:00
+                                </div>
+                                <div class="weather-small__icon">
+                                    <div class="small-test"></div>
+                                </div>
+                                <div class="weather-small__temperature">
+                                    18&#176; C
+                                </div>
                             </div>
-                            <div class="weather-small__icon">
-                                <div class="small-test"></div>
-                            </div>
-                            <div class="weather-small__temperature">
-                                18&#176; C
-                            </div>
-                        </li>
-                        <li class="weather-future__item weather-small">
-                            <div class="weather-small__hourse">
-                                20:00
-                            </div>
-                            <div class="weather-small__icon">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="weather-future__item weather-small">
+                                <div class="weather-small__hourse">
+                                    20:00
+                                </div>
+                                <div class="weather-small__icon">
 
+                                </div>
+                                <div class="weather-small__temperature">
+                                    18&#176; C
+                                </div>
                             </div>
-                            <div class="weather-small__temperature">
-                                18&#176; C
-                            </div>
-                        </li>
-                        <li class="weather-future__item weather-small">
-                            <div class="weather-small__hourse">
-                                20:00
-                            </div>
-                            <div class="weather-small__icon">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="weather-future__item weather-small">
+                                <div class="weather-small__hourse">
+                                    20:00
+                                </div>
+                                <div class="weather-small__icon">
 
+                                </div>
+                                <div class="weather-small__temperature">
+                                    18&#176; C
+                                </div>
                             </div>
-                            <div class="weather-small__temperature">
-                                18&#176; C
-                            </div>
-                        </li>
-                        <li class="weather-future__item weather-small">
-                            <div class="weather-small__hourse">
-                                20:00
-                            </div>
-                            <div class="weather-small__icon">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="weather-future__item weather-small">
+                                <div class="weather-small__hourse">
+                                    20:00
+                                </div>
+                                <div class="weather-small__icon">
 
+                                </div>
+                                <div class="weather-small__temperature">
+                                    18&#176; C
+                                </div>
                             </div>
-                            <div class="weather-small__temperature">
-                                18&#176; C
-                            </div>
-                        </li>
-                        <li class="weather-future__item weather-small">
-                            <div class="weather-small__hourse">
-                                20:00
-                            </div>
-                            <div class="weather-small__icon">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="weather-future__item weather-small">
+                                <div class="weather-small__hourse">
+                                    20:00
+                                </div>
+                                <div class="weather-small__icon">
 
+                                </div>
+                                <div class="weather-small__temperature">
+                                    18&#176; C
+                                </div>
                             </div>
-                            <div class="weather-small__temperature">
-                                18&#176; C
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
                 <ul class="weather-screen__bottom weather-info">
                     <li class="weather-info__item info-item">
@@ -201,7 +212,7 @@
         </div>
     </div>
 
-    <script src="js/custom-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/get-country.js"></script>
     <script src="js/script.js"></script>
     <script src="js/animation-bg.js"></script>

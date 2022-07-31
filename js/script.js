@@ -10,6 +10,8 @@ modalWrapper.addEventListener('click', (e) => {
 
     if (target.matches('.modal__button--yes') || target.matches('.modal__close')) {
         modalWrapper.classList.add('modal--disable');
+        modalQuestion.classList.add('modal__inner--disable');
+        modalSearch.classList.add('modal__inner--disable');
     }
 
     if (target.matches('.modal__button--no')) {
@@ -52,7 +54,7 @@ function getWeather(dataLoc) {
     const cityName = dataLoc.city;
     const countryName = dataLoc.country;
 
-    console.log(dataLoc);
+    // console.log(dataLoc);
 
     fetch(`${param.url}?q=${cityName},${countryName.toLowerCase()}&units=metric&APPID=${param.appid}`)
         .then(weather => {
@@ -105,12 +107,57 @@ function showWeather(data) {
             temperature.innerHTML = Math.round(data.list[i].main.temp) + '&#xb0; C';
         }
 
+        const futureWeatherWrapper = document.querySelector('.weather-future__list');
+
+        function setWeatherOnNextDays() {
+            let pastDate = new Date();
+
+            for (let item of data.list) {
+                const currentDate = new Date(item.dt_txt);
+
+                if (currentDate > pastDate && currentDate.getHours() == '15') {
+                    pastDate = currentDate;
+
+                    console.log(currentDate);
+                    futureWeatherWrapper.innerHTML += `
+                    <div class="swiper-slide">
+                    <div class="weather-future__item weather-small">
+                    <div class="weather-small__hourse">
+                        ${String(currentDate).slice(0, 3)}
+                    </div>
+                    <div class="weather-small__icon">
+                    <div class="small-${item.weather['0'].main.toLowerCase()}"></div>
+                    </div>
+                    <div class="weather-small__temperature">
+                        ${Math.round(item.main.temp)} &#xb0; C
+                    </div>
+                </div>
+                </div>
+                    `
+                }
+            }
+        }
+
+        setWeatherOnNextDays();
+
 
     } else {
         errorSwitcher = 0;
         alert('Incorrect city, try again');
     }
 
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 3,
+        // centeredSlides: true,
+
+        breakpoints: {
+            // when window width is >= 320px
+            576: {
+                slidesPerView: 5,
+            }
+        }
+    });
 }
 
 getLocation();
